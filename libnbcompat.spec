@@ -53,6 +53,6 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/libnbcompat.a
 
 %changelog
-* Fri Jan 02 2026 Package Maintainer <maintainer@example.com> - 2020.08.17-1
+* Fri Jan 02 2026 Package Maintainer <maintainer@example.com> - 1.0.2-1
 - Initial COPR package for libnbcompat
-- Based on upstream release tag 2020-08-17
+- Based on upstream release tag 1.0.2

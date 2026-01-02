@@ -21,7 +21,7 @@ This is a condensed reference for quickly setting up a COPR repository. For deta
 3. **Build Package**:
    - Go to "Builds" → "New Build"
    - Select "SCM" tab
-   - Clone URL: `https://github.com/dioni21/libnmcompat.git`
+   - Clone URL: `https://github.com/dioni21/libnbcompat.git`
    - Spec file: `libnbcompat.spec`
    - Click "Build"
 
@@ -44,7 +44,7 @@ copr-cli create libnbcompat \
 
 # Build from SCM
 copr-cli buildscm libnbcompat \
-  --clone-url https://github.com/dioni21/libnmcompat.git \
+  --clone-url https://github.com/dioni21/libnbcompat.git \
   --spec libnbcompat.spec \
   --type git
 ```
@@ -68,8 +68,8 @@ sudo dnf install libnbcompat libnbcompat-devel
 
 The package builds directly from the upstream GitHub release:
 - Repository: https://github.com/archiecobbs/libnbcompat
-- Source: https://github.com/archiecobbs/libnbcompat/archive/refs/tags/2020-08-17.tar.gz
+- Source: https://github.com/archiecobbs/libnbcompat/archive/refs/tags/1.0.2.tar.gz
 
 No source files are copied to this repository - the spec file downloads them during build.
 
-**Note**: This packaging repository is named `libnmcompat` while the upstream project is `libnbcompat`. The spec file references the upstream source directly.
+**Note**: This packaging repository and the upstream project are both named `libnbcompat`.  The spec file references the upstream source directly.

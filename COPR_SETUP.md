@@ -14,9 +14,9 @@ COPR (Cool Other Package Repo) is a build system and repository hosting service 
 
 ## Step 1: Create a COPR Account
 
-1. Go to https://copr.fedorainfracloud.org/
+1. Go to <https://copr.fedorainfracloud.org/>
 2. Click "Sign In" in the top right corner
-3. Sign in with your Fedora Account (or create one at https://accounts.fedoraproject.org/)
+3. Sign in with your Fedora Account (or create one at <https://accounts.fedoraproject.org/>)
 4. Accept the COPR terms of service
 
 ## Step 2: Create a New COPR Project
@@ -54,7 +54,7 @@ COPR (Cool Other Package Repo) is a build system and repository hosting service 
 1. In your COPR project page, click on "Settings"
 2. Scroll to "Source Type" and select "SCM"
 3. Configure the SCM source:
-   - **Clone URL**: `https://github.com/dioni21/libnmcompat.git`
+   - **Clone URL**: `https://github.com/dioni21/libnbcompat.git`
    - **Committish**: `main` (or your branch name)
    - **Spec File Path**: `libnbcompat.spec`
    - **Type**: `git`
@@ -65,11 +65,13 @@ COPR (Cool Other Package Repo) is a build system and repository hosting service 
 ### Option C: Using the copr-cli Command Line Tool
 
 1. Install the COPR CLI tool:
+
    ```bash
    sudo dnf install copr-cli
    ```
 
 2. Configure authentication:
+
    ```bash
    # Go to https://copr.fedorainfracloud.org/api/
    # Copy your API token
@@ -77,6 +79,7 @@ COPR (Cool Other Package Repo) is a build system and repository hosting service 
    ```
 
 3. Create the project (if not created via web interface):
+
    ```bash
    copr-cli create libnbcompat \
      --chroot fedora-39-x86_64 \
@@ -87,15 +90,17 @@ COPR (Cool Other Package Repo) is a build system and repository hosting service 
    ```
 
 4. Submit a build from the spec file:
+
    ```bash
-   copr-cli build libnbcompat https://github.com/archiecobbs/libnbcompat/archive/refs/tags/2020-08-17.tar.gz \
+   copr-cli build libnbcompat https://github.com/archiecobbs/libnbcompat/archive/refs/tags/1.0.2.tar.gz \
      --spec libnbcompat.spec
    ```
 
    Or if you have both the spec and source locally:
+
    ```bash
    copr-cli buildscm libnbcompat \
-     --clone-url https://github.com/dioni21/libnmcompat.git \
+     --clone-url https://github.com/dioni21/libnbcompat.git \
      --spec libnbcompat.spec \
      --type git
    ```
@@ -115,16 +120,19 @@ COPR (Cool Other Package Repo) is a build system and repository hosting service 
 Once the build succeeds:
 
 1. Enable the COPR repository on a Fedora system:
+
    ```bash
    sudo dnf copr enable YOUR_USERNAME/libnbcompat
    ```
 
 2. Install the package:
+
    ```bash
    sudo dnf install libnbcompat libnbcompat-devel
    ```
 
 3. Test the installation:
+
    ```bash
    # Check installed files
    rpm -ql libnbcompat
@@ -156,9 +164,9 @@ When upstream releases a new version:
 
 ## Additional Resources
 
-- COPR Documentation: https://docs.pagure.org/copr.copr/
-- RPM Packaging Guide: https://rpm-packaging-guide.github.io/
-- Fedora Packaging Guidelines: https://docs.fedoraproject.org/en-US/packaging-guidelines/
+- COPR Documentation: <https://docs.pagure.org/copr.copr/>
+- RPM Packaging Guide: <https://rpm-packaging-guide.github.io/>
+- Fedora Packaging Guidelines: <https://docs.fedoraproject.org/en-US/packaging-guidelines/>
 - Upstream Project: https://github.com/archiecobbs/libnbcompat
 
 ## Troubleshooting
@@ -178,4 +186,4 @@ Ensure the library soname version in %files matches what's actually built. You m
 ## Support
 
 For issues with the upstream library, report them at: https://github.com/archiecobbs/libnbcompat/issues
-For COPR-specific issues, visit: https://pagure.io/copr/copr
+For COPR-specific issues, visit: <https://pagure.io/copr/copr>

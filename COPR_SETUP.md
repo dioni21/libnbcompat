@@ -137,7 +137,7 @@ Once the build succeeds:
    # Check installed files
    rpm -ql libnbcompat
    rpm -ql libnbcompat-devel
-   
+
    # Verify library is loadable
    ldconfig -p | grep libnbcompat
    ```
@@ -167,7 +167,7 @@ When upstream releases a new version:
 - COPR Documentation: <https://docs.pagure.org/copr.copr/>
 - RPM Packaging Guide: <https://rpm-packaging-guide.github.io/>
 - Fedora Packaging Guidelines: <https://docs.fedoraproject.org/en-US/packaging-guidelines/>
-- Upstream Project: https://github.com/archiecobbs/libnbcompat
+- Upstream Project: <https://github.com/archiecobbs/libnbcompat>
 
 ## Troubleshooting
 
@@ -185,5 +185,5 @@ Ensure the library soname version in %files matches what's actually built. You m
 
 ## Support
 
-For issues with the upstream library, report them at: https://github.com/archiecobbs/libnbcompat/issues
+For issues with the upstream library, report them at: <https://github.com/archiecobbs/libnbcompat/issues>
 For COPR-specific issues, visit: <https://pagure.io/copr/copr>

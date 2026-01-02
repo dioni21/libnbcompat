@@ -29,7 +29,7 @@ sudo dnf install libnbcompat libnbcompat-devel
 
 ## Upstream
 
-- Upstream repository: https://github.com/archiecobbs/libnbcompat
+- Upstream repository: <https://github.com/archiecobbs/libnbcompat>
 - Current packaged version: 1.0.2
 
 **Note**: This packaging repository and the upstream project are both named `libnbcompat`.

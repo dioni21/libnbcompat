@@ -71,3 +71,5 @@ The package builds directly from the upstream GitHub release:
 - Source: https://github.com/archiecobbs/libnbcompat/archive/refs/tags/2020-08-17.tar.gz
 
 No source files are copied to this repository - the spec file downloads them during build.
+
+**Note**: This packaging repository is named `libnmcompat` while the upstream project is `libnbcompat`. The spec file references the upstream source directly.

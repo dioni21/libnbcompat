@@ -1,12 +1,12 @@
 Name:           libnbcompat
 %global         buildtag 1.0.2
 Version:        %{buildtag}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Portable NetBSD compatibility library
 
 License:        BSD
 URL:            https://github.com/archiecobbs/libnbcompat
-Source0:        https://github.com/archiecobbs/libnbcompat/archive/refs/tags/1.0.2.tar.gz
+Source0:        libnbcompat-1.0.2.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  make
@@ -43,7 +43,6 @@ bash ./autogen.sh
 find %{buildroot} -name '*.la' -delete
 
 %files
-%license LICENSE
 %doc README
 %{_libdir}/libnbcompat.so.*
 

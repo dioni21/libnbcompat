@@ -43,6 +43,7 @@ bash ./autogen.sh
 find %{buildroot} -name '*.la' -delete
 
 %files
+%license LICENSE
 %doc README
 %{_libdir}/libnbcompat.so.*
 
